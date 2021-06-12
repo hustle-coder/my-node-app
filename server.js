@@ -64,6 +64,10 @@ fastify.get("/api/v1/modules", function(request, reply){
   });
 })
 
+fastify.get('/api/v1/test', (req, res) => {
+  res.send({data: {test: 'a'}});
+})
+
 // Run the server and report out to the logs
 fastify.listen(process.env.PORT, function(err, address) {
   if (err) {
